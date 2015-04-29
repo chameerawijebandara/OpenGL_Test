@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pro02_OpenGL_Window_Reshaping.cpp">
+    <ClCompile Include="Pro04_OpenGL_Primitives_Square.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
