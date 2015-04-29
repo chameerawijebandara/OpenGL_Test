@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pro06_OpenGL_Cube.cpp">
+    <ClCompile Include="Pro08_OpenGL_Buffering.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
