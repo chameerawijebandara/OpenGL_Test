@@ -1,32 +1,41 @@
 #include <GL/glew.h> // Include the GLEW header file
 #include <GL/glut.h>
 
-
-GLfloat angle = 0.0;
+GLfloat angle = 0.0; //angle for cube1
+GLfloat tangle = 0.0; //angle for cube2
 
 void cube (void) {
+	glPushMatrix(); //set where to start the current object transformations
+	glTranslatef(1, 0, 0); //move cube1 to the right
 	glRotatef(angle, 1.0, 0.0, 0.0);
 	glRotatef(angle, 0.0, 1.0, 0.0);
 	glRotatef(angle, 0.0, 0.0, 1.0);
-	glColor3f(1.0, 0.0, 0.0);
-	glutSolidCube(2);
+	glColor3f(1.0, 0.0, 0.0); //change cube1 to red
+	glutWireCube(2);
+	glPopMatrix(); //end the current object transformations
 }
 
-void init (void) {
-	glEnable (GL_DEPTH_TEST);
-	glEnable (GL_LIGHTING);
-	glEnable (GL_LIGHT0);
+void cube2 (void) {
+	glPushMatrix(); //set where to start the current object 	transformations
+	glTranslatef(-1, 0, 0); //move cube2 to the left
+	glRotatef(tangle, 1.0, 0.0, 0.0);
+	glRotatef(tangle, 0.0, 1.0, 0.0);
+	glRotatef(tangle, 0.0, 0.0, 1.0);
+	glColor3f(0.0, 1.0, 0.0); //change cube2 to green
+	glutWireCube(2);
+	glPopMatrix(); //end the current object transformations
 }
 
 void display (void) {
 	glClearColor (0.0,0.0,0.0,1.0);
-	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glLoadIdentity();  
+	glClear (GL_COLOR_BUFFER_BIT);
+	glLoadIdentity();
 	gluLookAt (0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-	
 	cube();
+	cube2();
 	glutSwapBuffers();
-	angle += 0.01;
+	angle+= 0.010;
+	tangle+= 0.020;
 }
 
 void reshape (int w, int h) {
@@ -39,12 +48,10 @@ void reshape (int w, int h) {
 
 int main (int argc, char **argv) {
 	glutInit (&argc, argv);
-	glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH
-		);
+	glutInitDisplayMode (GLUT_DOUBLE);
 	glutInitWindowSize (500, 500);
 	glutInitWindowPosition (100, 100);
 	glutCreateWindow ("A basic OpenGL Window");
-	init ();
 	glutDisplayFunc (display);
 	glutIdleFunc (display);
 	glutReshapeFunc (reshape);

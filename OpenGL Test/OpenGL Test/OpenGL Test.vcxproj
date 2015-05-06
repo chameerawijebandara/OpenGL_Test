@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pro09_OpenGL_Scaling.cpp" />
+    <ClCompile Include="Pro27_OpenGL_Basic_Shadows.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AAB63F85-C85A-4DBA-B527-7E46616F2EBE}</ProjectGuid>

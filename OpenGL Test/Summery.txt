@@ -45,3 +45,31 @@ int main (int argc, char **argv) {
 
 	glutMainLoop(); // Enter GLUT's main loop
 }
+
+
+glClearDepth(1);
+glEnable(GL_DEPTH_TEST);
+glEnable(GL_LIGHTING);
+glEnable(GL_LIGHT0);
+
+There is also:
+glEnable(GL_LIGHT0);
+glEnable(GL_LIGHT1);
+glEnable(GL_LIGHT2);
+glEnable(GL_LIGHT3);
+--------------------
+glColor3f(1,0,0);
+glEnable(GL_COLOR_MATERIAL);
+
+A specular light is a light that sets highlights and often the shininess of
+an object. So if you light a sphere with a diffuse light and a specular light
+the specular light will add the highlights.
+
+A diffuse light, is just a coloured light, and handles the diffuse term for lighting. It basically sets the colour.
+
+An ambient light is a light that lights up the scene from every direction.
+So even though the sun is a diffuse light, it acts like an ambient light
+to us who are on the surface of the earth and during the day, see light
+everywhere.
+
+Now an emissive light is a light which radiates from an object. Like a glow, only without the nice, blurred halo type effect.

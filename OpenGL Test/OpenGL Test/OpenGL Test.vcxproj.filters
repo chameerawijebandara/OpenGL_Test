@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pro09_OpenGL_Scaling.cpp">
+    <ClCompile Include="Pro27_OpenGL_Basic_Shadows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

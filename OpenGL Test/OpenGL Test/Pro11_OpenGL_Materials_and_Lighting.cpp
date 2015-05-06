@@ -5,6 +5,7 @@ GLfloat angle = 0.0;
 GLfloat redDiffuseMaterial[] = {1.0, 0.0, 0.0}; //set the material to red
 GLfloat whiteSpecularMaterial[] = {1.0, 1.0, 1.0}; //set the material to white
 GLfloat greenEmissiveMaterial[] = {0.0, 1.0, 0.0}; //set the material to green
+
 GLfloat whiteSpecularLight[] = {1.0, 1.0, 1.0}; //set the light specular to white
 GLfloat blackAmbientLight[] = {0.0, 0.0, 0.0}; //set the light ambient to black
 GLfloat whiteDiffuseLight[] = {1.0, 1.0, 1.0}; //set the diffuse light to white
